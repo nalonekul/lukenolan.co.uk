@@ -189,6 +189,13 @@
 				height: auto;
 				object-fit: contain;
 			}
+			#wrapper > main > #photography > .inner,
+			#wrapper > main > #contact > .inner {
+				width: 100%;
+				max-width: 68em;
+				margin: 0 auto;
+				padding: 0 2.5em;
+			}
 			.contact-section { color: #fff; background: var(--green-dark); }
 			.contact-section h2, .contact-section h3 { color: #fff; }
 			.contact-section a { color: #d8e6d9; }
@@ -211,6 +218,8 @@
 				.research-panel .image-panel { order: -1; }
 				.qualification-layout .image-panel img { max-height: 340px; }
 				.cards, .contact-grid { grid-template-columns: 1fr; }
+				#wrapper > main > #photography > .inner,
+				#wrapper > main > #contact > .inner { padding: 0 1.25em; }
 			}
 			@media screen and (max-width: 736px) {
 				.photo-gallery { grid-template-columns: 1fr; }
