@@ -173,6 +173,22 @@
 			}
 			.blog-note .image-panel img { max-height: 290px; }
 			.blog-note p:last-child { margin-bottom: 0; }
+			.photo-gallery {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1.5rem;
+			}
+			.photo-gallery figure {
+				margin: 0;
+				background: var(--sand);
+				border: 1px solid var(--line);
+			}
+			.photo-gallery img {
+				display: block;
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+			}
 			.contact-section { color: #fff; background: var(--green-dark); }
 			.contact-section h2, .contact-section h3 { color: #fff; }
 			.contact-section a { color: #d8e6d9; }
@@ -195,6 +211,9 @@
 				.research-panel .image-panel { order: -1; }
 				.qualification-layout .image-panel img { max-height: 340px; }
 				.cards, .contact-grid { grid-template-columns: 1fr; }
+			}
+			@media screen and (max-width: 736px) {
+				.photo-gallery { grid-template-columns: 1fr; }
 			}
 			@media (prefers-reduced-motion: reduce) {
 				html { scroll-behavior: auto; }
@@ -244,7 +263,7 @@
 							</div>
 						</div>
 						<figure class="hero-photo">
-							<img src="images/profile.jpg" alt="Luke Nolan, postgraduate researcher at Leeds University" width="945" height="612" fetchpriority="high" />
+							<img src="images/profile.jpg" alt="Luke Nolan, postgraduate researcher at Leeds University" width="521" height="582" fetchpriority="high" />
 							<figcaption>Luke Nolan · Sociologist, educator and researcher</figcaption>
 						</figure>
 					</section>
@@ -380,6 +399,25 @@
 						</div>
 					</section>
 				</div>
+
+				<section id="photography" class="content-section" aria-labelledby="photography-title">
+					<div class="inner">
+						<div class="section-heading">
+							<h2 id="photography-title">Photography</h2>
+							<p>Alongside my academic work, I am an amateur photographer. A selection of my photographs is displayed below. I particularly enjoy capturing the architectural dissonance and juxtaposition of different eras within the built environment.</p>
+						</div>
+						<div class="photo-gallery">
+							<figure><img src="images/Advert.JPG" alt="Brick shops along a Leeds street with a faded wall advertisement" width="3872" height="2176" loading="lazy" decoding="async" /></figure>
+							<figure><img src="images/Billboards.JPG" alt="Leeds buildings and large advertising billboards" width="3872" height="2176" loading="lazy" decoding="async" /></figure>
+							<figure><img src="images/Cinema.JPG" alt="A large brick building in Leeds photographed from the street" width="3872" height="2176" loading="lazy" decoding="async" /></figure>
+							<figure><img src="images/EastEndPark.JPG" alt="Open green space and trees in an East Leeds park" width="3872" height="2176" loading="lazy" decoding="async" /></figure>
+							<figure><img src="images/Gym.JPG" alt="A historic brick building beside a gym in Leeds" width="3872" height="2176" loading="lazy" decoding="async" /></figure>
+							<figure><img src="images/SkateparkView.JPG" alt="A skate park in a wide green public space" width="3872" height="2176" loading="lazy" decoding="async" /></figure>
+							<figure><img src="images/Stones.JPG" alt="Weathered stones surrounded by grass and wildflowers" width="3872" height="2176" loading="lazy" decoding="async" /></figure>
+							<figure><img src="images/WoodhouseMoor.JPG" alt="A tree-lined walking path at Woodhouse Moor" width="3872" height="2176" loading="lazy" decoding="async" /></figure>
+						</div>
+					</div>
+				</section>
 
 				<section id="contact" class="content-section contact-section" aria-labelledby="contact-title">
 					<div class="inner">
