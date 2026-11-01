@@ -1,202 +1,421 @@
 <!DOCTYPE HTML>
 <!--
-	Minimaxing by HTML5 UP
+	Phantom by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Luke Nolan | Sociologist, Educator, Researcher</title>
+		<title>Luke Nolan | Sociologist, Educator &amp; Researcher</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Luke Nolan is a postgraduate researcher in work and employment at Leeds University Business School." />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Luke Nolan is a postgraduate researcher in work and employment at Leeds University Business School, studying workers and identities in UK worker co-operatives." />
+		<meta name="author" content="Luke Nolan" />
+		<meta name="theme-color" content="#183c37" />
+		<link rel="canonical" href="https://lukenolan.co.uk/" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			:root {
+				--ink: #203b38;
+				--muted: #64736f;
+				--green: #2e6357;
+				--green-dark: #183c37;
+				--sand: #f3f2ec;
+				--line: #dce3dd;
+				--paper: #fff;
+			}
+
+			html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+			body { color: var(--ink); background: var(--paper); }
+			body, input, select, textarea { font-family: "Source Sans Pro", Helvetica, sans-serif; }
+			a { color: var(--green); }
+			a:hover { color: var(--green-dark) !important; }
+			h1, h2, h3, h4 { color: var(--ink); }
+			h1 { margin-bottom: 0.35em; }
+			h2 { margin: 0 0 1.15em; letter-spacing: 0.2em; }
+			h3 { margin: 0 0 0.6em; letter-spacing: 0.12em; }
+			p { margin-bottom: 1.25em; }
+			.inner { max-width: 1160px; }
+
+			.skip-link {
+				position: absolute;
+				top: -4rem;
+				left: 1rem;
+				z-index: 20;
+				padding: 0.65rem 1rem;
+				color: #fff;
+				background: var(--green-dark);
+			}
+			.skip-link:focus { top: 1rem; }
+			#header { padding-top: 1.5em; }
+			#header .inner { align-items: center; }
+			#header .logo { border: 0; color: var(--green-dark); }
+			#header .logo .title { font-size: 1.05em; letter-spacing: 0.08em; }
+			#header nav a { color: var(--green-dark); }
+			#menu { background: var(--green-dark); }
+			#menu h2, #menu a { color: #fff; }
+			#menu a { border-bottom-color: rgba(255,255,255,0.3); }
+
+			.hero {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) minmax(250px, 0.7fr);
+				gap: clamp(2rem, 7vw, 6rem);
+				align-items: center;
+				padding: clamp(3rem, 8vw, 7rem) 0 clamp(4rem, 9vw, 8rem);
+			}
+			.hero-copy { max-width: 690px; }
+			.eyebrow {
+				margin: 0 0 1rem;
+				color: var(--green);
+				font-size: 0.78rem;
+				font-weight: 700;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+			}
+			.hero h1 { font-size: clamp(2.6rem, 6vw, 5.2rem); line-height: 1.02; }
+			.hero .role {
+				margin: 0 0 1.35rem;
+				color: var(--green);
+				font-size: clamp(1.05rem, 2vw, 1.35rem);
+				font-weight: 700;
+				letter-spacing: 0.02em;
+			}
+			.hero .intro { max-width: 620px; color: #455b56; font-size: 1.15em; }
+			.hero-photo {
+				position: relative;
+				margin: 0;
+				padding: 0.8rem;
+				background: var(--sand);
+				box-shadow: 1.2rem 1.2rem 0 var(--line);
+			}
+			.hero-photo img {
+				display: block;
+				width: 100%;
+				aspect-ratio: 4 / 5;
+				object-fit: cover;
+				object-position: center 38%;
+			}
+			.hero-photo figcaption {
+				padding: 0.65rem 0.25rem 0.1rem;
+				color: var(--muted);
+				font-size: 0.78em;
+			}
+			.hero-links { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+			.button {
+				display: inline-block;
+				padding: 0.7rem 1.1rem;
+				border: 1px solid var(--green);
+				border-radius: 2px;
+				color: var(--green-dark);
+				font-size: 0.9em;
+				font-weight: 700;
+			}
+			.button.primary { color: #fff; background: var(--green); }
+			.button:hover { background: var(--sand); }
+			.button.primary:hover { color: var(--green-dark) !important; }
+
+			.content-section { padding: clamp(3rem, 7vw, 6rem) 0; border-top: 1px solid var(--line); }
+			.section-heading { max-width: 760px; margin-bottom: 2rem; }
+			.section-heading p { color: var(--muted); }
+			.about-grid, .split-grid {
+				display: grid;
+				grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.8fr);
+				gap: clamp(2rem, 6vw, 5rem);
+				align-items: start;
+			}
+			.about-note {
+				padding: 1.5rem;
+				border-left: 3px solid var(--green);
+				background: var(--sand);
+			}
+			.about-note p:last-child { margin-bottom: 0; }
+			.image-panel { margin: 0; background: var(--sand); }
+			.image-panel img { display: block; width: 100%; height: auto; max-height: 360px; object-fit: cover; }
+			.image-panel figcaption { padding: 0.7rem 0.9rem; color: var(--muted); font-size: 0.78em; }
+			.research-panel {
+				display: grid;
+				grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+				gap: 2rem;
+				align-items: center;
+				padding: clamp(1.5rem, 4vw, 3rem);
+				background: var(--sand);
+			}
+			.research-panel .image-panel img { max-height: 300px; }
+			.interest-list, .plain-list { list-style: none; margin: 0; padding: 0; }
+			.interest-list li, .plain-list li { padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+			.interest-list li:last-child, .plain-list li:last-child { border-bottom: 0; }
+			.cards {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 1.5rem;
+			}
+			.info-card { height: 100%; padding: 1.6rem; border: 1px solid var(--line); }
+			.info-card p:last-child, .info-card ul:last-child { margin-bottom: 0; }
+			.info-card .meta { color: var(--muted); font-size: 0.9em; }
+			.publication { border-left: 3px solid var(--green); padding-left: 1.25rem; }
+			.publication p { margin-bottom: 0.55rem; }
+			.presentation-list li { padding: 0.8rem 0; }
+			.qualification-layout {
+				display: grid;
+				grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+				gap: clamp(2rem, 6vw, 5rem);
+				align-items: center;
+			}
+			.qualification-layout .image-panel img { max-height: 440px; object-position: center 35%; }
+			.blog-note {
+				display: grid;
+				grid-template-columns: minmax(200px, 0.8fr) minmax(0, 1.2fr);
+				gap: 2rem;
+				align-items: center;
+				padding: clamp(1.5rem, 4vw, 3rem);
+				background: var(--sand);
+			}
+			.blog-note .image-panel img { max-height: 290px; }
+			.blog-note p:last-child { margin-bottom: 0; }
+			.contact-section { color: #fff; background: var(--green-dark); }
+			.contact-section h2, .contact-section h3 { color: #fff; }
+			.contact-section a { color: #d8e6d9; }
+			.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+			.contact-list { list-style: none; margin: 0; padding: 0; }
+			.contact-list li { padding: 0.45rem 0; }
+			.contact-list strong { display: inline-block; min-width: 5.5rem; }
+			#footer { padding-top: 1.5rem; background: var(--green-dark); }
+			#footer .copyright { color: rgba(255,255,255,0.72); }
+			#footer .copyright a { color: #fff; }
+			.back-to-top { display: inline-block; margin-top: 1rem; color: #fff !important; }
+
+			@media screen and (max-width: 736px) {
+				.hero, .about-grid, .split-grid, .research-panel, .qualification-layout, .blog-note {
+					grid-template-columns: 1fr;
+				}
+				.hero { gap: 2.5rem; }
+				.hero-photo { max-width: 430px; }
+				.hero-photo img { aspect-ratio: 5 / 4; object-position: center 36%; }
+				.research-panel .image-panel { order: -1; }
+				.qualification-layout .image-panel img { max-height: 340px; }
+				.cards, .contact-grid { grid-template-columns: 1fr; }
+			}
+			@media (prefers-reduced-motion: reduce) {
+				html { scroll-behavior: auto; }
+			}
+		</style>
 	</head>
-	<body>
-		<div id="page-wrapper">
+	<body class="is-preload">
+		<a class="skip-link" href="#main">Skip to content</a>
+		<div id="wrapper">
+			<header id="header">
+				<div class="inner">
+					<a href="#home" class="logo"><span class="title">Luke Nolan</span></a>
+					<nav aria-label="Main navigation">
+						<ul><li><a href="#menu" aria-label="Open site menu">Menu</a></li></ul>
+					</nav>
+				</div>
+			</header>
 
-			<!-- Header -->
-				<div id="header-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
+			<nav id="menu" aria-label="Site sections">
+				<h2>Explore</h2>
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About Me</a></li>
+					<li><a href="#research">Current Research</a></li>
+					<li><a href="#interests">Research Interests</a></li>
+					<li><a href="#teaching">Teaching</a></li>
+					<li><a href="#publications">Publications</a></li>
+					<li><a href="#presentations">Conference Presentations</a></li>
+					<li><a href="#qualifications">Qualifications</a></li>
+					<li><a href="#research-groups">Research Groups</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
 
-								<header id="header">
-									<h1><a href="#" id="logo">Luke Nolan</a></h1>
-									<nav id="nav">
-										<a href="#" class="current-page-item">Home</a>
-										<a href="#">Research</a>
-										<a href="#">Teaching</a>
-										<a href="#">Publications</a>
-										<a href="#">Blog</a>
-										<a href="#">Contact</a>
-									</nav>
-								</header>
-
+			<main id="main">
+				<div class="inner">
+					<section id="home" class="hero" aria-labelledby="home-title">
+						<div class="hero-copy">
+							<p class="eyebrow">Leeds University Business School</p>
+							<h1 id="home-title">Luke Nolan</h1>
+							<p class="role">Sociologist <span aria-hidden="true">|</span> Educator <span aria-hidden="true">|</span> Researcher</p>
+							<p class="intro">Postgraduate researcher in work and employment, exploring workers' experiences and identities in UK worker co-operatives.</p>
+							<div class="hero-links">
+								<a class="button primary" href="#research">Explore my research</a>
+								<a class="button" href="#contact">Get in touch</a>
 							</div>
 						</div>
-					</div>
-				</div>
+						<figure class="hero-photo">
+							<img src="images/profile.jpg" alt="Luke Nolan, postgraduate researcher at Leeds University" width="945" height="612" fetchpriority="high" />
+							<figcaption>Luke Nolan · Sociologist, educator and researcher</figcaption>
+						</figure>
+					</section>
 
-			<!-- Banner -->
-				<div id="banner-wrapper">
-					<div class="container">
-
-						<div id="banner">
-							<h2>Luke Nolan</h2>
-							<span>Sociologist | Educator | Researcher</span>
-							<p>Postgraduate Researcher in Work and Employment at Leeds University Business School.</p>
+					<section id="about" class="content-section" aria-labelledby="about-title">
+						<div class="about-grid">
+							<div>
+								<p class="eyebrow">Background</p>
+								<h2 id="about-title">About Me</h2>
+								<p>I am a postgraduate researcher with the Department of People, Work and Employment at Leeds University Business School. I joined the PhD programme in October 2024, funded by a departmental scholarship.</p>
+								<p>My interest in work and employment grew from more than ten years of experience in the hospitality and retail industries.</p>
+								<p>I am passionate about both learning and teaching sociology and hope to contribute to our understanding of the social world through my research.</p>
+							</div>
+							<aside class="about-note">
+								<h3>At a glance</h3>
+								<p>In the most general terms, I am interested in trying to better understand the different ways people make sense of, and embody, work and employment. My current research project explores how alternative forms of labour are mutually produced through workers' identities. I hope to help in the transition to a post-growth economy in which the work that we do, and the lives that we live, are more wholly integrated.</p>
+								<a href="#qualifications">View academic background <span aria-hidden="true">&rarr;</span></a>
+							</aside>
 						</div>
+					</section>
 
-					</div>
-				</div>
-
-			<!-- Main -->
-				<div id="main">
-					<div class="container">
-						<div class="row main-row">
-							<div class="col-8 col-12-medium">
-
-								<section id="about">
-									<h2>About Me</h2>
-									<p>I am a postgraduate researcher with the Department of People, Work and Employment at Leeds University Business School. I joined the PhD programme in October 2024, funded by a departmental scholarship.</p>
-									<p>My interest in work and employment grew from more than ten years of experience in the hospitality and retail industries.</p>
-									<p>I am passionate about both learning and teaching sociology and hope to contribute to our understanding of the social world through my research.</p>
-								</section>
-
+					<section id="research" class="content-section" aria-labelledby="research-title">
+						<div class="section-heading">
+							<h2 id="research-title">Current Research</h2>
+						</div>
+						<div class="research-panel">
+							<div>
+								<h3>Workers and co-operative practice</h3>
+								<p>My PhD research investigates the experiences and identities of workers in UK worker co-operatives.</p>
+								<p>Through in-depth qualitative interviews, I explore how workers' lived experiences, occupations and workplace relations inform the reproduction of labour organised around co-operative principles in different ways.</p>
 							</div>
-							<div class="col-4 col-6-medium col-12-small">
+							<figure class="image-panel">
+								<img src="images/EastLeedsHouses.JPG" alt="A residential street in East Leeds" width="3872" height="2176" loading="lazy" />
+								<figcaption>East Leeds · Personal photography</figcaption>
+							</figure>
+						</div>
+					</section>
 
-								<section>
-									<h2>Latest Activity</h2>
-									<ul class="link-list">
-										<li>PhD research on UK worker co-operatives</li>
-										<li>Recent publication on community-led climate action</li>
-										<li>Conference presentations</li>
-									</ul>
-								</section>
-
+					<section id="interests" class="content-section" aria-labelledby="interests-title">
+						<div class="split-grid">
+							<div>
+								<h2 id="interests-title">Research Interests</h2>
+								<ul class="interest-list">
+									<li>Just transitions from an ecological economics perspective</li>
+									<li>Occupational identities</li>
+									<li>Democratic participation and autonomy in the workplace</li>
+									<li>Participatory research methods</li>
+								</ul>
 							</div>
-							<div class="col-4 col-6-medium col-12-small">
+							<figure class="image-panel">
+								<img src="images/EastendparkView.JPG" alt="A landscape with a wind turbine and open green space" width="3872" height="2176" loading="lazy" />
+								<figcaption>Personal landscape photography</figcaption>
+							</figure>
+						</div>
+					</section>
 
-								<section id="qualifications">
-									<h2>Qualifications</h2>
-									<ul class="link-list">
-										<li>BA Sociology, The Open University (2023)</li>
-										<li>MA Social Research, University of Leeds (2024)</li>
-									</ul>
-								</section>
+					<section id="teaching" class="content-section" aria-labelledby="teaching-title">
+						<div class="section-heading">
+							<h2 id="teaching-title">Teaching</h2>
+						</div>
+						<div class="info-card">
+							<h3>Teaching Assistant</h3>
+							<p>I am currently a Teaching Assistant on undergraduate business and management modules at Leeds University Business School.</p>
+							<p>Responsibilities include seminar delivery and assessment support.</p>
+						</div>
+					</section>
 
-							</div>
-							<div class="col-8 col-12-medium">
+					<section id="publications" class="content-section" aria-labelledby="publications-title">
+						<div class="section-heading">
+							<h2 id="publications-title">Publications</h2>
+						</div>
+						<article class="publication">
+							<p><strong>Nolan, L. &amp; Garvey, A. (2025).</strong></p>
+							<p><em>The Benefits of Community-led Climate Action.</em></p>
+							<p>The National Lottery Community Fund.</p>
+							<p><a href="https://www.tnlcommunityfund.org.uk/media/insights/documents/Benefits_of_Community-led_Climate_Action_Full_Report_RQ1.pdf?mtime=20260120150923&amp;focal=none" target="_blank" rel="noopener noreferrer">Read the report <span aria-hidden="true">&rarr;</span></a></p>
+						</article>
+					</section>
 
-								<section id="research">
-									<h2>Current Research</h2>
-									<p>My PhD research investigates the experiences and identities of workers in UK worker co-operatives.</p>
-									<p>Through in-depth qualitative interviews, I explore how workers' lived experiences, occupations and workplace relations inform the reproduction of labour organised around co-operative principles in different ways.</p>
-									<h3>Research Interests</h3>
-									<ul class="link-list">
-										<li>Just transitions from an ecological economics perspective</li>
-										<li>Occupational identities</li>
-										<li>Democratic participation and autonomy in the workplace</li>
-										<li>Participatory research methods</li>
-									</ul>
-								</section>
+					<section id="presentations" class="content-section" aria-labelledby="presentations-title">
+						<div class="section-heading">
+							<h2 id="presentations-title">Conference Presentations</h2>
+						</div>
+						<div class="cards">
+							<figure class="image-panel">
+								<img src="images/Conference.jpg" alt="Luke Nolan presenting a research poster at an academic conference" width="600" height="450" loading="lazy" />
+								<figcaption>Sharing research at a conference</figcaption>
+							</figure>
+							<ul class="plain-list presentation-list">
+								<li><strong>2026</strong> — Work, Employment and Society Conference, oral presentation</li>
+								<li><strong>2026</strong> — Leeds University Business School Doctoral Conference, oral presentation</li>
+								<li><strong>2025</strong> — CERIC Doctoral Conference, oral presentation</li>
+								<li><strong>2025</strong> — Leeds University Business School Doctoral Conference, poster presentation</li>
+							</ul>
+						</div>
+					</section>
 
-							</div>
-							<div class="col-4 col-12-medium">
-
-								<section>
-									<h2>Research Groups</h2>
-									<ul class="link-list">
-										<li>Centre for Employment Relations, Innovation and Change (CERIC)</li>
-									</ul>
-								</section>
-
-							</div>
-							<div class="col-6 col-12-medium">
-
-								<section id="publications">
-									<h2>Publications</h2>
-									<p>Nolan, L. &amp; Garvey, A. (2025).<br />
-									<em>The Benefits of Community-led Climate Action.</em><br />
-									The National Lottery Community Fund.</p>
-									<p><a href="https://www.tnlcommunityfund.org.uk/media/insights/documents/Benefits_of_Community-led_Climate_Action_Full_Report_RQ1.pdf?mtime=20260120150923&amp;focal=none" target="_blank" rel="noopener noreferrer">Read the report</a></p>
-								</section>
-
-							</div>
-							<div class="col-6 col-12-medium">
-
-								<section>
-									<h2>Conference Presentations</h2>
-									<ul class="link-list">
-										<li>Work, Employment and Society Conference (2026) &ndash; Oral Presentation</li>
-										<li>Leeds University Business School Doctoral Conference (2026) &ndash; Oral Presentation</li>
-										<li>CERIC Doctoral Conference (2025) &ndash; Oral Presentation</li>
-										<li>Leeds University Business School Doctoral Conference (2025) &ndash; Poster Presentation</li>
-									</ul>
-								</section>
-
-							</div>
-							<div class="col-4 col-12-medium">
-
-								<section id="teaching">
-									<h2>Teaching</h2>
-									<p>Teaching Assistant on undergraduate business and management modules.</p>
-									<p>Responsibilities include seminar delivery and assessment support.</p>
-								</section>
-
-							</div>
-							<div class="col-4 col-12-medium">
-
-								<section id="blog">
-									<h2>Blog</h2>
-									<p>Future posts will include research reflections, conference notes, teaching resources, and commentary on work, employment and worker co-operatives.</p>
-									<p><strong>Coming soon</strong></p>
-								</section>
-
-							</div>
-							<div class="col-4 col-12-medium">
-
-								<section id="contact">
-									<h2>Contact</h2>
-									<ul class="link-list">
-										<li>Email: <a href="mailto:ss23ln@leeds.ac.uk">ss23ln@leeds.ac.uk</a></li>
-										<li>LinkedIn: <a href="https://www.linkedin.com/in/luke-nolan-9997112b6/" target="_blank" rel="noopener noreferrer">Luke Nolan</a></li>
-										<li>Website: <a href="https://lukenolan.co.uk">lukenolan.co.uk</a></li>
-									</ul>
-								</section>
-
+					<section id="qualifications" class="content-section" aria-labelledby="qualifications-title">
+						<div class="qualification-layout">
+							<figure class="image-panel">
+								<img src="images/Graduation.JPG" alt="Luke Nolan in graduation attire holding his degree certificate" width="668" height="1001" loading="lazy" />
+							</figure>
+							<div>
+								<h2 id="qualifications-title">Qualifications</h2>
+								<ul class="plain-list">
+									<li><strong>MA Social Research</strong><br />University of Leeds, 2024</li>
+									<li><strong>BA Sociology</strong><br />The Open University, 2023</li>
+								</ul>
 							</div>
 						</div>
-					</div>
-				</div>
+					</section>
 
-			<!-- Footer -->
-				<div id="footer-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
+					<section id="research-groups" class="content-section" aria-labelledby="groups-title">
+						<div class="section-heading">
+							<h2 id="groups-title">Research Groups</h2>
+						</div>
+						<div class="info-card">
+							<p>Centre for Employment Relations, Innovation and Change (CERIC)</p>
+						</div>
+					</section>
 
-								<div id="copyright">
-									&copy; 2026 Luke Nolan. All rights reserved.<br />
-									Website content &copy; Luke Nolan.<br />
-									Design adapted from Minimaxing by HTML5 UP. <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>
-								</div>
-
+					<section id="blog" class="content-section" aria-labelledby="blog-title">
+						<div class="blog-note">
+							<figure class="image-panel">
+								<img src="images/Flowers.JPG" alt="Flowers growing in a green landscape" width="3872" height="2176" loading="lazy" />
+								<figcaption>Personal photography</figcaption>
+							</figure>
+							<div>
+								<h2 id="blog-title">Blog</h2>
+								<p>Future posts will include research reflections, conference notes, teaching resources, and commentary on work, employment and worker co-operatives.</p>
+								<p><strong>Coming soon</strong></p>
 							</div>
 						</div>
-					</div>
+					</section>
 				</div>
 
+				<section id="contact" class="content-section contact-section" aria-labelledby="contact-title">
+					<div class="inner">
+						<div class="contact-grid">
+							<div>
+								<p class="eyebrow">Connect</p>
+								<h2 id="contact-title">Contact</h2>
+								<p>For enquiries about my research, teaching or academic work, please get in touch.</p>
+							</div>
+							<ul class="contact-list">
+								<li><strong>Email</strong> <a href="mailto:ss23ln@leeds.ac.uk">ss23ln@leeds.ac.uk</a></li>
+								<li><strong>LinkedIn</strong> <a href="https://www.linkedin.com/in/luke-nolan-9997112b6/" target="_blank" rel="noopener noreferrer">Luke Nolan</a></li>
+								<li><strong>Website</strong> <a href="https://lukenolan.co.uk">lukenolan.co.uk</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer id="footer">
+				<div class="inner">
+					<ul class="copyright">
+						<li>&copy; Luke Nolan. All rights reserved.</li>
+						<li>Website content &copy; Luke Nolan.</li>
+						<li>Design adapted from Phantom by <a href="https://html5up.net" target="_blank" rel="noopener noreferrer">HTML5 UP</a>.</li>
+						<li>Phantom is free for personal and commercial use under the <a href="https://html5up.net/license" target="_blank" rel="noopener noreferrer">CCA 3.0 license</a>.</li>
+					</ul>
+					<a class="back-to-top" href="#home">Back to top &uarr;</a>
+				</div>
+			</footer>
 		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
